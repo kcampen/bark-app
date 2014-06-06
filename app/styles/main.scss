@@ -10,6 +10,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     background-image: url(../images/cloud.png);
+    
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -50,7 +51,7 @@ body {
     background-color: lime;
     padding-top: 20px;
     padding-bottom: 10px;
-
+    margin-right: 30px;
 
 }
 
@@ -58,6 +59,40 @@ body {
 .main {
     outline: 1px solid green;
     padding-top: 20px;
+    background: #fff;
+}
+
+.stream-header {
+    border-bottom: 1px solid #502B29;
+}
+
+.tweet {
+    border-bottom: 1px solid #B1B18A;
+    padding: 9px 12px;
+
+    .content {
+        margin-left: 58px;
+    }
+
+    .tweet-header {
+        color: lime;
+        padding-left: 10px;
+        width: 100%;
+    }
+     
+     .avatar {
+        overflow: hidden;
+        float: left;
+        margin-left: -65px;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .message {
+        margin-left: 58px;
+    }
 }
 
 
