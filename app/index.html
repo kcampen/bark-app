@@ -33,8 +33,6 @@
 			<div class="container">
 				<ul class="nav nav-pills pull-right">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
 				</ul>
 				<h3 class="text-muted">bark app</h3>
 			</div>
@@ -43,7 +41,7 @@
 			<div class="container">
 				<div class="sidebar col-lg-5 col-md-5 col-sm-5 col-xs-5">
 					<div class="userbox">
-
+						<div class="user-name">Name</div>
 					</div>
 					<div class="compose">
 					  <input class="expand share" type="text" name="input" placeholder="share">
@@ -95,6 +93,8 @@
 		<!-- endbower -->
 		<!-- endbuild -->
 
+		<script src="//www.parsecdn.com/js/parse-1.2.17.min.js"></script>
+
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -121,6 +121,8 @@
 		<!-- endbuild -->
 
 		<!-- build:js({app,.tmp}) scripts/main.js -->
+		<script src="scripts/list-view.js"></script>
+		<script src="scripts/message-model.js"></script>
 		<script src="scripts/main.js"></script>
 		<!-- endbuild -->
 </body>

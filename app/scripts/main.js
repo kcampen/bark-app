@@ -6,6 +6,24 @@ var Userprofile = {
     avatar: "images/bird.png",
 };
 
+$(document).ready(function(){
+    Parse.initialize("9PlCVbEmxC5VQPCDKTOyUgspmKdTa5T0QCgc8jFz", "ql2QlK4i02VZupEWzZrGvWLFsPMSsGGIiGP7Rl1Z");
+
+    window.messages = new MessagesCollection();
+
+});
+
+function loadPage(){
+    //Load messages
+    messages.fetch({
+        success: function(){
+            messages.sort();
+            messages.each(function(message){
+                new ListView({model: message});
+            });
+        },
+    }); 
+
 var Tweet = function(Userprofile) {
     this.tweetID = _.uniqueId('tweet');
     this.name = Userprofile.name;
@@ -13,7 +31,6 @@ var Tweet = function(Userprofile) {
     this.msg = $('.share').val();
     this.avatar = Userprofile.avatar;
     this.time = 'Feb 4, 2014'
-    this.isFavorite = false;
 };
 
 var postTemplate = _.template($('.tweet-template').text());
